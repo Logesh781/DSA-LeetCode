@@ -2,7 +2,7 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int ans;
-        unordered_map<int,int>hash;
+        unordered_map<long long,int>hash;
         for(int i = 0;i<nums.size();i++){
             hash[nums[i]]++;
         }
