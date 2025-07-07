@@ -2,13 +2,13 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int ans;
-        unordered_map<long long,int>hash;
+        map<int,int>hash;
         for(int i = 0;i<nums.size();i++){
             hash[nums[i]]++;
         }
-        for(int i = 0;i<nums.size();i++){
-            if(hash[nums[i]] == 1){
-            ans = nums[i];
+        for(auto it : hash){
+            if(it.second == 1){
+            ans = it.first;
             break;    
             } 
         }
